@@ -1,0 +1,199 @@
+/* Reset básico y configuración general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0e0e0;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* Contenedor principal con diseño responsive */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Título dorado con borde negro */
+.main-title {
+  font-size: 38px;
+  font-weight: bold;
+  color: #FFD700; /* Dorado (como oro puro) */
+  text-shadow: 
+    0 0 5px #FFD700,
+    0 0 10px #FFD700,
+    0 0 15px #FFD700;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  padding: 10px;
+  border: 3px solid #000; /* Borde negro */
+  border-radius: 10px;
+  background-color: #111; /* Fondo oscuro para resaltar el dorado */
+  display: inline-block;
+  width: auto;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra de búsqueda */
+#searchInput {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  margin: 20px auto;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+#searchInput:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Ocultar búsqueda inicialmente */
+.hidden {
+  display: none;
+}
+
+/* Botones de selección */
+.buttons {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.buttons button {
+  background: #2c3e50;
+  color: white;
+  border: 2px solid #000;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 120px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:hover {
+  background: #e6b000;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista de enlaces */
+#linksList {
+  list-style: none;
+  margin-top: 20px;
+}
+
+#linksList li {
+  padding: 14px 20px;
+  background: #ffffff;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s;
+  border-left: 5px solid #FFD700;
+}
+
+#linksList li:hover {
+  background: #fff9e6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+#linksList a {
+  color: #2980b9;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-decoration: none;
+  display: block;
+}
+
+#linksList a:hover {
+  color: #1a5f9e;
+  text-decoration: underline;
+}
+
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .main-title {
+    font-size: 30px;
+    padding: 8px;
+    border-width: 2px;
+  }
+
+  .buttons button {
+    font-size: 16px;
+    padding: 12px 20px;
+    min-width: 100px;
+  }
+
+  #searchInput {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  #linksList li {
+    padding: 12px 16px;
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .main-title {
+    font-size: 26px;
+    letter-spacing: 1px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .buttons button {
+    font-size: 15px;
+    padding: 10px 16px;
+    width: 45%;
+  }
+
+  #searchInput {
+    font-size: 15px;
+  }
+}
